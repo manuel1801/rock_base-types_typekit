@@ -1,0 +1,8 @@
+import("rtt_ros")
+ros.import("rock_base-types_typekit")
+
+loadComponent("test_component","TestComponent")
+setActivity("test_component",1,HighestPriority,ORO_SCHED_RT)
+
+# test_component.configure()
+# test_component.start()
