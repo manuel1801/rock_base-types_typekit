@@ -40,9 +40,6 @@ namespace base
         // convenience: same for Eigen::Vector3d
         Waypoint(Eigen::Vector3d const &_position, double _heading,
                  double _tol_position, double _tol_heading);
-
-        // Waypoint(double _position, double _heading,
-        //          double _tol_position, double _tol_heading);
     };
 
     // Displaying:

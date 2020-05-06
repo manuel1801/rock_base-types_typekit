@@ -23,14 +23,19 @@ namespace base
     // Displaying
     std::ostream &operator<<(std::ostream &os, const Waypoint &wp)
     {
-        return os << "position: " /* << wp.position*/ << ", heading: " << wp.heading << ", tol position: " << wp.tol_position << ", tol heading: " << wp.tol_heading;
+        return os << "(position[0]: " << wp.position[0]
+                  << ", position[1]: " << wp.position[1]
+                  << ", position[2]: " << wp.position[2]
+                  << "), heading: " << wp.heading
+                  << ", tol position: " << wp.tol_position
+                  << ", tol heading: " << wp.tol_heading;
     }
 
     // Reading :
     std::istream &operator>>(std::istream &is, Waypoint &wp)
     {
         char c;
-        return is >> c /*>> wp.position */ >> c >> wp.heading >> c >> wp.tol_position >> c >> wp.tol_heading; // 'c' reads '(' ',' ',' ')' and ':'
+        return is >> c >> wp.position[0] >> c >> wp.position[1] >> c >> wp.position[2] >> c >> wp.heading >> c >> wp.tol_position >> c >> wp.tol_heading; // 'c' reads '(' ',' ',' ')' and ':'
     }
 
     // The 'true' argument means:  it has operator<< and operator>>
