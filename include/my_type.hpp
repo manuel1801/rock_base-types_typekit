@@ -10,16 +10,6 @@ struct ControlData
     ControlData();
 };
 
-namespace boost
-{
-    namespace serialization
-    {
-        // The helper function which you write yourself:
-        template <class Archive>
-        void serialize(Archive &a, ControlData &cd, unsigned int);
-
-    } // namespace serialization
-} // namespace boost
 // Displaying:
 std::ostream &operator<<(std::ostream &os, const ControlData &cd);
 // Reading :
@@ -32,3 +22,14 @@ struct ControlDataTypeInfo
 {
     ControlDataTypeInfo();
 };
+
+namespace boost
+{
+    namespace serialization
+    {
+        // The helper function which you write yourself:
+        template <class Archive>
+        void serialize(Archive &a, ControlData &cd, unsigned int);
+
+    } // namespace serialization
+} // namespace boost

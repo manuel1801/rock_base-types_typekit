@@ -4,7 +4,7 @@
 #include <istream>
 #include "rock_typekit.hpp"
 #include "my_type.hpp"
-// #include "Waypoint.hpp"
+#include "Waypoint.hpp"
 
 namespace App
 {
@@ -14,7 +14,7 @@ namespace App
     {
         // Tell the RTT the name and type of this struct
         RTT::types::Types()->addType(new ControlDataTypeInfo());
-        // RTT::types::Types()->addType(new WaypointTypeInfo());
+        RTT::types::Types()->addType(new WaypointTypeInfo());
     }
 
     /** ...Add the other example code of this manual here as well... */
