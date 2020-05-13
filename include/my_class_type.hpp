@@ -3,12 +3,18 @@
 #include <ostream>
 #include <istream>
 
-struct ControlData
+/** class has read-only members */
+class ControlClass
 {
-    double x, y, z;
-    int sample_nbr;
-    ControlData();
-    double sumAll();
+    const int joints;
+
+public:
+    // Mandatory !
+    ControlClass();
+    // Mandatory !
+    ControlClass(const ControlClass &orig);
+
+    ControlClass(int joints);
 };
 
 // Displaying:

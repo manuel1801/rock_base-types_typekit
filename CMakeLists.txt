@@ -28,6 +28,8 @@ orocos_library(rock_typekit
   src/Waypoint.cpp
   src/Angle.cpp
   src/Pose.cpp
+  # src/my_class_type.cpp
+  src/JointState.cpp
 )
 target_link_libraries(rock_typekit ${catkin_LIBRARIES} ${USE_OROCOS_LIBRARIES})
 

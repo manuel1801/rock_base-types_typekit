@@ -53,6 +53,7 @@ private:
     wp.tol_heading = 1.0;
 
     // std::cout << "writing waipoint: " << wp << std::endl;
+    std::cout << "writing waipoint: " << cd.sumAll() << std::endl;
     wp_out.write(wp);
   }
 };
